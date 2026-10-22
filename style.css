@@ -1,0 +1,137 @@
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    color: #172554;
+    background: #eef4ff;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(circle at top left, #dbeafe, transparent 55%),
+        #eef4ff;
+}
+
+.weather-app {
+    width: min(100%, 460px);
+    padding: 32px;
+    border: 1px solid #ffffff;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 24px 70px #1e3a8a14;
+}
+
+h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+    letter-spacing: -1px;
+}
+
+.weather-app > p {
+    color: #64748b;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin: 24px 0 18px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font: inherit;
+    outline: none;
+}
+
+input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px #2563eb20;
+}
+
+button {
+    padding: 14px 18px;
+    border: 0;
+    border-radius: 12px;
+    background: #2563eb;
+    color: white;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#message {
+    min-height: 20px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+#weather-result {
+    margin-top: 24px;
+    padding: 26px;
+    border-radius: 22px;
+    background: linear-gradient(145deg, #eff6ff, #dbeafe);
+    text-align: center;
+}
+
+#city-name {
+    margin: 0;
+    font-size: 21px;
+}
+
+#temperature {
+    margin: 18px 0 8px;
+    font-size: 64px;
+    font-weight: 750;
+    letter-spacing: -3px;
+}
+
+#condition {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#humidity,
+#wind {
+    color: #475569;
+    font-size: 14px;
+}
+
+@media (max-width: 420px) {
+    body {
+        padding: 14px;
+    }
+
+    .weather-app {
+        padding: 22px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    #temperature {
+        font-size: 54px;
+    }
+}
